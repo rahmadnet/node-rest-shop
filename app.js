@@ -8,7 +8,7 @@ const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/user');
 
-const uri = 'mongodb://127.0.0.1:27017/node-rest-shop';
+const uri = process.env.MONGODB_URI;
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 
