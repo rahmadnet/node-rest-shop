@@ -54,7 +54,7 @@ exports.orders_create_order = (req, res, next) => {
                         },
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:3000/orders/' + result._id
+                            url: 'https://rahmadnet-api.herokuapp.com/orders/' + result._id
                         }
                     });
                 })
