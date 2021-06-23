@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 exports.orders_get_all = (req, res, next) => {
     Order.find()
         .select('product quantity _id')
-        .populate('product', 'name')
+        .populate('product')
         .exec()
         .then(docs => {
             res.status(200).json({
